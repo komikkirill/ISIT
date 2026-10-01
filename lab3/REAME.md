@@ -90,37 +90,15 @@ hotel-management-system/
 
 │   ├── src/
 
-│   │   ├── components/           # Переиспользуемые компоненты
-
-│   │   │   ├── BookingForm.vue
-
-│   │   │   ├── RoomCard.vue
-
-│   │   │   └── Calendar.vue
+│   │   ├── components/           # компоненты
 
 │   │   ├── views/                # Страницы
 
-│   │   │   ├── AdminDashboard.vue
-
-│   │   │   ├── GuestPortal.vue
-
-│   │   │   └── Housekeeping.vue
-
 │   │   ├── services/             # HTTP-клиенты для API
-
-│   │   │   └── api.js
 
 │   │   ├── store/                # Управление состоянием
 
-│   │   │   └── index.js
-
 │   │   ├── router/               # Маршрутизация
-
-│   │   │   └── index.js
-
-│   │   └── main.js
-
-│   ├── package.json
 
 │   └── README.md
 
