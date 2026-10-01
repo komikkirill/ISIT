@@ -90,7 +90,8 @@ hotel-management-system/
 │   │   ├── router/               # Маршрутизация
 │   ├── package.json
 │   └── README.md
-│
+
+
 ├── backend/                      # Серверная часть
 │   ├── src/
 │   │   ├── controllers/          # Контроллеры (приём HTTP-запросов)
@@ -109,7 +110,8 @@ hotel-management-system/
 │   │   └── app.js                # Точка входа
 │   ├── package.json
 │   └── README.md
-│
+
+
 ├── database/                     # База данных
 │   ├── migrations/               # Миграции
 │   │   
