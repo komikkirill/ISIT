@@ -81,53 +81,97 @@ Backend проверяет права доступа через модуль а�
 hotel-management-system/
 ├── frontend/                     # Клиентская часть
 │   ├── public/
-│   │   ├── index.html            # главная 
+│   │   ├── index.html
+│   │   └── assets/
 │   ├── src/
 │   │   ├── components/           # Переиспользуемые компоненты
+│   │   │   ├── BookingForm.vue
+│   │   │   ├── RoomCard.vue
+│   │   │   └── Calendar.vue
 │   │   ├── views/                # Страницы
+│   │   │   ├── AdminDashboard.vue
+│   │   │   ├── GuestPortal.vue
+│   │   │   └── Housekeeping.vue
 │   │   ├── services/             # HTTP-клиенты для API
+│   │   │   └── api.js
 │   │   ├── store/                # Управление состоянием
+│   │   │   └── index.js
 │   │   ├── router/               # Маршрутизация
+│   │   │   └── index.js
+│   │   └── main.js
 │   ├── package.json
 │   └── README.md
-
-
+│
 ├── backend/                      # Серверная часть
 │   ├── src/
 │   │   ├── controllers/          # Контроллеры (приём HTTP-запросов)
+│   │   │   ├── authController.js
+│   │   │   ├── bookingController.js
+│   │   │   ├── roomController.js
+│   │   │   ├── guestController.js
+│   │   │   └── stayController.js
 │   │   ├── services/             # Бизнес-логика
-│   │   
-│   │   
+│   │   │   ├── authService.js
+│   │   │   ├── bookingService.js
+│   │   │   ├── roomService.js
+│   │   │   ├── guestService.js
+│   │   │   ├── stayService.js
+│   │   │   └── notificationService.js
 │   │   ├── repositories/         # Доступ к данным
-│   │   │   
+│   │   │   ├── bookingRepository.js
+│   │   │   ├── roomRepository.js
+│   │   │   ├── guestRepository.js
+│   │   │   ├── stayRepository.js
+│   │   │   └── userRepository.js
 │   │   ├── models/               # Модели данных
-│   │   │  
+│   │   │   ├── Room.js
+│   │   │   ├── Category.js
+│   │   │   ├── Guest.js
+│   │   │   ├── Booking.js
+│   │   │   ├── Stay.js
+│   │   │   └── User.js
 │   │   ├── routes/               # Маршруты API
-│   │   │  
+│   │   │   ├── authRoutes.js
+│   │   │   ├── bookingRoutes.js
+│   │   │   ├── roomRoutes.js
+│   │   │   ├── guestRoutes.js
+│   │   │   └── stayRoutes.js
+│   │   ├── middleware/           # Промежуточное ПО
+│   │   │   ├── authMiddleware.js
+│   │   │   └── errorHandler.js
 │   │   ├── utils/                # Вспомогательные функции
+│   │   │   ├── dateUtils.js
+│   │   │   └── priceCalculator.js
 │   │   ├── config/               # Конфигурация
 │   │   │   └── database.js
 │   │   └── app.js                # Точка входа
 │   ├── package.json
 │   └── README.md
-
-
+│
 ├── database/                     # База данных
 │   ├── migrations/               # Миграции
-│   │   
+│   │   ├── 001_create_rooms.sql
+│   │   ├── 002_create_guests.sql
+│   │   ├── 003_create_bookings.sql
+│   │   └── 004_create_stays.sql
+│   ├── seeds/                    # Начальные данные
+│   │   └── seed.sql
 │   └── schema.sql                # Схема БД
 │
 ├── docs/                         # Документация
 │   ├── architecture.md
 │   ├── api.md
-│  
+│   └── diagrams/
+│       ├── architecture-diagram.png
+│       └── sequence-diagram.png
+│
 ├── diagrams/                     # Исходники диаграмм
 │   ├── architecture.mermaid
 │   └── sequence.mermaid
 │
 ├── .gitignore
 ├── README.md
-
+└── docker-compose.yml            # Опционально: для развёртывания
 # 6. Архитектурные схемы
 <img width="1532" height="812" alt="lab3-1 drawio" src="https://github.com/user-attachments/assets/0f361ec8-c71d-4042-be1e-587d32386522" />
 <img width="772" height="757" alt="lab3-2 drawio" src="https://github.com/user-attachments/assets/c5365351-5967-4546-b343-36eecb3469b6" />
