@@ -1,0 +1,34 @@
+[
+    {
+        "id": 2,
+        "room_id": 2,
+        "guest_name": "Петрова Анна Сергеевна",
+        "check_in": "2024-06-02",
+        "check_out": "2024-06-10",
+        "status": "in_progress"
+    },
+    {
+        "id": 3,
+        "room_id": 1,
+        "guest_name": "Сидоров Петр Алексеевич",
+        "check_in": "2024-05-20",
+        "check_out": "2024-05-25",
+        "status": "done"
+    },
+    {
+        "room_id": 3,
+        "guest_name": "ааыиталри",
+        "check_in": "121212-12-12",
+        "check_out": "212222-12-12",
+        "status": "new",
+        "id": 4
+    },
+    {
+        "room_id": 1,
+        "guest_name": "Тестовый Гость",
+        "check_in": "2024-12-01",
+        "check_out": "2024-12-05",
+        "status": "new",
+        "id": 5
+    }
+]
